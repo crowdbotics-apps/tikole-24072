@@ -11,12 +11,6 @@ class Group(models.Model):
 
 class PaymentMethod(models.Model):
     "Generated Model"
-    user = models.ForeignKey(
-        "users.User",
-        on_delete=models.CASCADE,
-        related_name="paymentmethod_user",
-    )
-    primary = models.BooleanField()
     token = models.CharField(
         max_length=256,
     )
